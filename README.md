@@ -28,3 +28,6 @@ If the player successfully passes all these levels and manages to keep Dino aliv
 ## 2. Flowchart
 
 ![Ekran Resmi 2024-06-25 17 52 10](https://github.com/aliemirozen/dino_game/assets/115935357/e5e12818-fd37-451f-913c-19cbb99aa598)
+
+You can use the [this](https://cpulator.01xz.net/?sys=arm-de1soc) site to try the game.
+
