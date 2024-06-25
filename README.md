@@ -8,7 +8,7 @@
 
 In this project, our aim is to make a game similar to the dino game, which we can observe using a 7-segment display. Dino game can be played in our browser, usually when there is no internet. On the display, we can see Dino and the random obstacles that come our way. We change the position of the Dino trough a switch and try to avoid these obstacles. If we cannot avoid these obstacles, the game ends. There are 3 levels in the game and in each level the obstacles get faster and this makes the game more difficult. So, our goal in this game is to avoid obstacles and win the game without killing Dino for a total of 25 seconds.
 
-![Ekran Resmi 2024-06-25 18 52 04](https://github.com/aliemirozen/dino_game/assets/115935357/3e279fef-800e-49ad-80db-2035337d18f8)
+![Abstract Picture](https://github.com/aliemirozen/dino_game/assets/115935357/3e279fef-800e-49ad-80db-2035337d18f8)
 
 
 ## 2. Explanations
@@ -34,7 +34,7 @@ If the player successfully passes all these levels and manages to keep Dino aliv
 
 ## 3. Flowchart
 
-![Ekran Resmi 2024-06-25 17 52 10](https://github.com/aliemirozen/dino_game/assets/115935357/e5e12818-fd37-451f-913c-19cbb99aa598)
+![Flowchart](https://github.com/aliemirozen/dino_game/assets/115935357/e5e12818-fd37-451f-913c-19cbb99aa598)
 
 You can use the [this](https://cpulator.01xz.net/?sys=arm-de1soc) site to try the game.
 
