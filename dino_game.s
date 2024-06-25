@@ -20,7 +20,7 @@ _start:
    LDR R8 , =0x00007331   // 00000000 00000000 01110011 00110001 = PR
    STR R8, [R3]
    
-   LDR R1, =0x00000600 //Score
+   LDR R1, =0x00000600 //Level
    
 START_GAME: 
    LDR R7, [R5, #12] 
@@ -37,7 +37,7 @@ LOOP_DINO:
    CMP R8 , #1
    MOVEQ R9, #0b01100000 // If the switches are up, that is, "1", the Dino is up.
    MOVNE R9, #0b01010000 // If the switches are down, that is, "0", the Dino is down
-   ADD R9, R9, R1 // Score + Dino
+   ADD R9, R9, R1 // Level + Dino
    STR R9, [R3]
 
 OBSTACLE_UPDATE:
@@ -100,14 +100,14 @@ TIME_UPDATE2:
    // Set obstacle encounter time to 0.75
    LDR R8, =150000000
    STR R8, [R4]
-   LDR R1 , =0x00005B00   // 01011011 Change the score
+   LDR R1 , =0x00005B00   // 01011011 Change the level
    B LOOP_DINO
 
 TIME_UPDATE3:
    // Set obstacle encounter time to 0.5
    LDR R8, =100000000
    STR R8, [R4]
-   LDR R1 , =0x00004F00   // 01001111 Change the score
+   LDR R1 , =0x00004F00   // 01001111 Change the level
    B LOOP_DINO
    
 WON_THE_GAME:
