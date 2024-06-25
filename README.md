@@ -4,7 +4,11 @@
 - Ali Emir Özen
 - Mahmut Küçükakyüz
 
-## 1. Explanations
+## 1. Abstract
+
+In this project, our aim is to make a game similar to the dino game, which we can observe using a 7-segment display. Dino game can be played in our browser, usually when there is no internet. On the display, we can see Dino and the random obstacles that come our way. We change the position of the Dino trough a switch and try to avoid these obstacles. If we cannot avoid these obstacles, the game ends. There are 3 levels in the game and in each level the obstacles get faster and this makes the game more difficult. So, our goal in this game is to avoid obstacles and win the game without killing Dino for a total of 25 seconds.
+
+## 2. Explanations
 
 This project was inspired by Dino Game’, which was opened when there was no internet available in Chrome. When the game is first run, “PRESS1” text comes on display. From “0xFF200050”, we read 12 bytes ahead of “Edge Bits” and check if there is data coming through the button. If this comes from “0001”, which is the rightmost button, it means that the button is pressed, and this starts the game. We only read data from the rightmost button. We do this by masking the data we hold with the value of "0001". If the data from the button is equal with this masked value, we clean the display and the game starts.
 
@@ -25,7 +29,7 @@ These durations are created thanks to the “Interrupt Status” bit found in Ti
 
 If the player successfully passes all these levels and manages to keep Dino alive without any obstacles for a total of 25 seconds, the player wins the game and "FINISH" is displayed on the display.
 
-## 2. Flowchart
+## 3. Flowchart
 
 ![Ekran Resmi 2024-06-25 17 52 10](https://github.com/aliemirozen/dino_game/assets/115935357/e5e12818-fd37-451f-913c-19cbb99aa598)
 
