@@ -1,8 +1,8 @@
 # Dino Game
 
 ## Team Members
-- [Ali Emir Özen]([url](https://github.com/aliemirozen))
-- [Mahmut Küçükakyüz]([url](https://github.com/oflu61-5)) 
+- Ali Emir Özen
+- Mahmut Küçükakyüz
 
 ## 1. Explanations
 
