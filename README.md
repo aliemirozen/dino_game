@@ -2,7 +2,7 @@
 
 ## Team Members
 - Ali Emir Özen
-- Mahmut Küçükakyüz
+- Mahmut Küçükak
 
 ## 1. Explanations
 
