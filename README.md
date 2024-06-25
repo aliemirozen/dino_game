@@ -1,8 +1,8 @@
-# dino_game
+# Dino Game
 
 ## 1. Explanations
 
-This project was inspired by Dino Game’, which was opened when there was no internet available in Chrome. When the game is first run, “PRESS1” text comes on display. From “0xFF200050”, we read 12 bytes ahead of “Edge Bits” and check if there is data coming through the button. If this comes from “0001”, which is the rightmost button, it means that the button is pressed, and this starts the game. We only read data from the rightmost button. We do this by masking the data we hold with the value of "0001". If the data from the button is equal with this masked value, we clean the display and the game starts.
+%p This project was inspired by Dino Game’, which was opened when there was no internet available in Chrome. When the game is first run, “PRESS1” text comes on display. From “0xFF200050”, we read 12 bytes ahead of “Edge Bits” and check if there is data coming through the button. If this comes from “0001”, which is the rightmost button, it means that the button is pressed, and this starts the game. We only read data from the rightmost button. We do this by masking the data we hold with the value of "0001". If the data from the button is equal with this masked value, we clean the display and the game starts.
 
 When our game starts, Dino is first positioned from left to 2nd display. Then the obstacles start to come from the right. When the game starts, the timer is set to 200MHz with an obstacle coming every 1 seconds. These obstacles are random. We carry out this random making process through the timer that we already use. First of all, after the obstacle has formed, we read the value of “Current Value” in the timer. We add to this value the R0 counter that we observe to the number of refreshes in the timer. Then we shift this number to 31 bit left and get the last bit to the top and the rest is reset. Then we compare this number with the number of “0x8000000”. As a result, if the value we get is “1”, the obstacle is below, if this value is “0”, the obstacle is formed above. Thus, we can form our obstacles in a random way.
 
