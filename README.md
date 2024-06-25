@@ -21,12 +21,11 @@ As the obstacles slip, we take the final version of the obstacle from the right 
 
 This is how our game works. The game lasts 25 seconds and consists of 3 levels:
 
-- LEVEL1: The first level is the process of getting used to the game. We write 200MHz to “Load Value” address in Timer, which is equivalent to one second. This creates a new obstacle every second and then shifts to the left. This level covers the first 7 seconds of the game. After 7 seconds, the first level is completed and reached to level 2.
+- **LEVEL1**: The first level is the process of getting used to the game. We write 200MHz to “Load Value” address in Timer, which is equivalent to one second. This creates a new obstacle every second and then shifts to the left. This level covers the first 7 seconds of the game. After 7 seconds, the first level is completed and reached to level 2.
 
-- LEVEL2: In the second level after the 7th second of the game, we update the “Load Value" located in the timer. Here we write 150MHz, which is equivalent to 0.75 seconds. At this level, an obstacle is created every 0.75 seconds. This level makes the game both faster and more difficult.At the end of 9 seconds, the second level is completed and the final level is reached to level 3.
+- **LEVEL2**: In the second level after the 7th second of the game, we update the “Load Value" located in the timer. Here we write 150MHz, which is equivalent to 0.75 seconds. At this level, an obstacle is created every 0.75 seconds. This level makes the game both faster and more difficult.At the end of 9 seconds, the second level is completed and the final level is reached to level 3.
 
-
-- LEVEL3: From the 16th second of the game, the last level, level 3, has been reached. This level is now the most difficult level of our game and it is really quite difficult to survive at this level. At this level, we are updating “Load Value” for the last time. We write 100MHz, which is equal to 0.5 seconds. This creates an obstacle every 0.5 seconds. This level covers the last 9 seconds of the game. Then the game is completed.
+- **LEVEL3**: From the 16th second of the game, the last level, level 3, has been reached. This level is now the most difficult level of our game and it is really quite difficult to survive at this level. At this level, we are updating “Load Value” for the last time. We write 100MHz, which is equal to 0.5 seconds. This creates an obstacle every 0.5 seconds. This level covers the last 9 seconds of the game. Then the game is completed.
 
 These durations are created thanks to the “Interrupt Status” bit found in Timer. This bit becomes one when each timer 0’s and starts again. According to this bit, our R0 counter increases. In this way, we can keep the data on how many obstacles have come and how many times the timer has been reset in the R0 register. In this way, we can adjust the time according to R0’ and make level upgrades.  We also print the level numbers here at the leftmost display. So the player can see what level he is on display. 
 
